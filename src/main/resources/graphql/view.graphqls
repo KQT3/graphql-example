@@ -1,0 +1,21 @@
+type User {
+    name: String
+    email: String
+    playlists: [Playlist]
+}
+
+type Playlist {
+    name: String
+    user: User
+}
+
+type View {
+    name: String
+    users: [User]
+    playlists: [Playlist]
+}
+
+type Query {
+    allUsers: [User]
+    getView: View
+}
